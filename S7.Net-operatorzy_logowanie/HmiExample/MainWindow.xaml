@@ -1,0 +1,58 @@
+﻿<Window x:Class="HmiExample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="340" Width="625">
+    <Grid Background="#FFE2E2E2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="IP Address:" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" Width="123"/>
+        <TextBox x:Name="txtIpAddress" HorizontalAlignment="Left" Margin="10,38,0,0" TextWrapping="Wrap" Text="               " VerticalAlignment="Top" Width="123" TextChanged="txtIpAddress_TextChanged"/>
+        <Button x:Name="btnConnect" Content="Connect" HorizontalAlignment="Left" Height="25" Margin="138,38,0,0" VerticalAlignment="Top" Width="91" Click="btnConnect_Click"/>
+        <Button x:Name="btnDisconnect" Content="Disconnect" HorizontalAlignment="Left" Height="25" Margin="234,38,0,0" VerticalAlignment="Top" Width="91" Click="btnDisconnect_Click"/>
+        <StatusBar Grid.Row="1">
+            <StatusBarItem>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Connection state: "/>
+                    <TextBlock x:Name="lblConnectionState"/>
+                </StackPanel>
+            </StatusBarItem>
+            <Separator/>
+            <StatusBarItem>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Cyclic read time: "/>
+                    <TextBlock x:Name="lblReadTime"/>
+                </StackPanel>
+            </StatusBarItem>
+        </StatusBar>
+
+
+
+        <Label Content="Start Adres DB" HorizontalAlignment="Left" Margin="213,107,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="txtSetStartAdresDB"  HorizontalAlignment="Left" Margin="318,111,0,0" TextWrapping="Wrap" Text="DB999.DBW000" VerticalAlignment="Top" Width="113" TextChanged="txtSetStartAdres_TextChanged"/>
+
+
+        <Label Content="End Adres DB" HorizontalAlignment="Left" Margin="213,138,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="txtSetEndAdresDB" HorizontalAlignment="Left" Margin="318,142,0,0" TextWrapping="Wrap" Text="DB999.DBW082" VerticalAlignment="Top" Width="113" TextChanged="txtSetEndAdres_TextChanged1"/>
+
+        <Button x:Name="btnOpenFile" Content="Open File" HorizontalAlignment="Left" Height="30" Margin="26,103,0,0" VerticalAlignment="Top" Width="120" Click="btnOpenFile_Click"/>
+        <Button x:Name="btnSendFileToDB" Content="Send File To DB" HorizontalAlignment="Left" Height="35" Margin="26,249,0,0" VerticalAlignment="Top" Width="120" Click="btnSendFileToDB_Click" RenderTransformOrigin="-0.567,6.398"/>
+
+
+        <Button x:Name="btnSetAdrDB" Content="Set Start Adres DB" HorizontalAlignment="Left" Height="35" Margin="26,146,0,0" VerticalAlignment="Top" Width="120" Click="btnSetAdresDB_Click" RenderTransformOrigin="-0.567,6.398"/>
+        <Button x:Name="btnEndAdrDB" Content="Set End Adres DB" HorizontalAlignment="Left" Height="35" Margin="26,196,0,0" VerticalAlignment="Top" Width="120" Click="btnEndAdresDB_Click" RenderTransformOrigin="-0.567,6.398"/>
+
+
+
+        <Label x:Name="lastThreeDigitsString" Content="###" HorizontalAlignment="Left" Margin="496,107,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.183,0.387" />
+        <Label x:Name="lastThreeDigitsString1" Content="###" HorizontalAlignment="Left" Margin="496,142,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.183,0.387" />
+        <TextBox x:Name="txtSetStartAdresDB_String" HorizontalAlignment="Left" Margin="318,181,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="113" TextChanged="txtSetEndAdres_TextChanged1"/>
+        <Label x:Name="lastThreeDigitsString2" Content="###" HorizontalAlignment="Left" Margin="496,177,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.183,0.387" />
+        <Label x:Name="lastThreeDigitsString3" Content="###" HorizontalAlignment="Left" Margin="496,213,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.183,0.387" />
+        <Label x:Name="lastThreeDigitsString4" Content="###" HorizontalAlignment="Left" Margin="496,249,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.183,0.387" />
+
+
+
+    </Grid>
+</Window>
